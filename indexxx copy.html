@@ -55,6 +55,16 @@
           font-size: 3.75rem !important;
         }
       }
+      @media (min-width: 300px) and (max-width: 640px) {
+        .hidden-arrow {
+          display: none;
+        }
+      }
+      @media (min-width: 640px) {
+        .hide-desk-arrow {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body class="font-inter">
@@ -343,13 +353,13 @@
         <div class="w-full sm:hidden lg:p-6 lg:block lg:w-1/2">
           <img src="images/testimonial.png" alt="Testimonial" class="w-full" />
           <div
-            class="flex gap-4 lg:w-full my-4 w-full justify-center lg:justify-start lg:items-end"
+            class="flex hidden-arrow gap-4 lg:w-full my-4 w-full justify-center lg:justify-start lg:items-end"
           >
             <img src="./images/Left arrow.png" alt="left arrow" />
             <img src="./images/Right arrow.png" alt="right wrrow" />
           </div>
         </div>
-        <div class="w-full lg:flex-1 px-2 lg:w-1s/3">
+        <div class="w-full lg:flex-1 px-2 my-8 lg:w-1s/3">
           <h2 class="text-2xl lg:text-5xl lg:w-full font-bold mb-4">
             What Our Customers Say About Us
           </h2>
@@ -357,8 +367,8 @@
             <div
               class="bg-black lg:w-1/2 lg:border-8 border-white p-8 lg:p-12 sm:w-1/2 text-white"
             >
-              <h3 class="text-6xl lg:text-8xl mb-4">"</h3>
-              <p class="mb-8 lg:text-2xl leading-6">
+              <h3 class="text-sm lg:text-8xl mb-4">"</h3>
+              <p class="lg:mb-8 text-sm lg:text-2xl leading-6">
                 Working with your design team was an absolute pleasure. The
                 attention to detail and creativity exceeded my expectations.
                 Thank you for making my home beautiful!
@@ -370,16 +380,16 @@
                   class="rounded-full w-16 h-16 mr-4"
                 />
                 <div>
-                  <h4>Sophie Carter</h4>
-                  <p>New York, USA</p>
+                  <h4 class="text-sm lg:text-2xl">Sophie Carter</h4>
+                  <p class="text-sm text-gray-400 lg:text-2xl">New York, USA</p>
                 </div>
               </div>
             </div>
             <div
               class="bg-black lg:border-8 border-white lg:w-1/2 px-8 border-2 border-red-500 sm:w-1/2 text-white"
             >
-              <h3 class="text-6xl lg:text-8xl mb-4">"</h3>
-              <p class="mb-8 lg:text-2xl leading-6">
+              <h3 class="text-sm lg:text-8xl m-4">"</h3>
+              <p class="lg:mb-8 text-sm lg:text-2xl leading-6">
                 Exceptional service! From the initial consultation to the final
                 reveal, your team demonstrated professionalism and a keen eye
                 for design. Highly recommend!
@@ -391,11 +401,19 @@
                   class="rounded-full w-16 object-cover h-16 mr-4"
                 />
                 <div>
-                  <h4>James Bennett</h4>
-                  <p>Toronto, Canada</p>
+                  <h4 class="text-base lg:text-2xl">James Bennett</h4>
+                  <p class="text-sm text-gray-400 lg:text-2xl">
+                    Toronto, Canada
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            class="flex gap-4 hide-desk-arrow lg:w-full my-4 w-full justify-center lg:justify-start lg:items-end"
+          >
+            <img src="./images/Left arrow.png" alt="left arrow" />
+            <img src="./images/Right arrow.png" alt="right wrrow" />
           </div>
         </div>
       </section>
@@ -417,16 +435,22 @@
             </p>
           </div>
           <div
-            class="flex justify-center items-center bg-white py-2 px-2 rounded shadow-md"
+            class="flex flex-col md:flex-row justify-between items-center bg-white py-2 px-2 rounded shadow-md"
           >
-            <img src="images/mail.png" alt="Email" class="w-4 ml-6 h-4 mr-2" />
-            <input
-              type="email"
-              placeholder="Enter your email"
-              class="w-full md:w-auto flex-1 px-4 py-2 outline-none bg-white"
-            />
+            <div class="flex h-10 items-center w-full md:w-auto">
+              <img
+                src="images/mail.png"
+                alt="Email"
+                class="w-4 ml-6 h-4 mr-2"
+              />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="w-full md:w-auto flex-1 px-4 py-2 outline-none bg-white"
+              />
+            </div>
             <button
-              class="md:w-auto bg-black font-medium text-xl text-white px-12 py-6 hover:bg-blue-700 transition-colors"
+              class="md:w-auto w-full bg-black font-medium text-xl text-white px-12 md:py-6 py-2 hover:bg-blue-700 transition-colors"
             >
               Subscribe
             </button>
