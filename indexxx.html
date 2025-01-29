@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>VivaDecor</title>
+    <style>
+      @media (min-width: 1024px) {
+        .desktop-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        .hero-section {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+        .hero-content {
+          flex: 1;
+        }
+        .hero-image {
+          flex: 1;
+        }
+      }
+      @media (max-width: 1023px) {
+        .desktop-flex-column {
+          flex-direction: column !important;
+        }
+        .desktop-width-full {
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-inter">
+    <!-- Header -->
+    <header class="desktop-container">
+      <nav class="navbar navbar-expand-lg bg-white px-4">
+        <div class="container-fluid flex items-center justify-between">
+          <img class="navbar-brand w-48" src="images/Logo.png" alt="Logo" />
+          <button
+            class="navbar-toggler block lg:hidden"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <div class="flex justify-center w-full">
+              <ul class="navbar-nav flex space-x-6">
+                <li class="nav-item">
+                  <a class="nav-link text-xl" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-xl" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-xl" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-xl" href="#">Support</a>
+                </li>
+              </ul>
+              <button
+                class="ml-6 w-32 font-semibold bg-black text-white rounded-md p-2"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="desktop-container">
+      <!-- Hero Section -->
+      <section class="hero-section py-12">
+        <div class="hero-content">
+          <h1 class="text-6xl font-medium mb-6">Interior Design</h1>
+          <p class="text-xl text-gray-600 mb-8 w-4/5">
+            Step into a world where the art of Interior Design is meticulously
+            crafted to bring together timeless elegance and cutting-edge modern
+            Innovation
+          </p>
+          <div class="flex items-center gap-6">
+            <button class="bg-black text-white px-6 py-3 rounded-md">
+              Start Project
+            </button>
+            <div class="flex items-center gap-4">
+              <div>
+                <h2 class="text-4xl text-gray-600">400+</h2>
+                <p class="text-lg text-gray-600">Projects</p>
+              </div>
+              <div>
+                <h2 class="text-4xl text-gray-600">600+</h2>
+                <p class="text-lg text-gray-600">Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero1.png" alt="hero1" class="w-full" />
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-12">
+        <div class="flex items-center mb-8">
+          <div class="w-14 h-1 bg-black mr-4"></div>
+          <h2 class="text-4xl font-bold">Our Services</h2>
+        </div>
+        <div class="flex gap-6">
+          <div class="flex-1 flex items-start gap-4">
+            <img class="w-20 h-20" src="images/service1.png" alt="Service1" />
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Lightning Design</h3>
+              <p class="text-lg">Achieve the perfect balance of lighting</p>
+            </div>
+          </div>
+          <div class="flex-1 flex items-start gap-4">
+            <img class="w-20 h-20" src="images/service2.png" alt="Service2" />
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Interior Design</h3>
+              <p class="text-lg">From concept to completion efficiently</p>
+            </div>
+          </div>
+          <div class="flex-1 flex items-start gap-4">
+            <img class="w-20 h-20" src="images/service3.png" alt="Service3" />
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Outdoor Design</h3>
+              <p class="text-lg">Celebrate seasonal outdoor decor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="flex desktop-flex-column gap-8 py-12">
+        <div class="desktop-width-full flex-1">
+          <img src="images/design1.png" alt="cta" class="w-full" />
+        </div>
+        <div class="desktop-width-full flex-1 flex flex-col justify-center">
+          <h2 class="text-4xl font-bold mb-6">Ready to get started?</h2>
+          <p class="text-xl mb-6">
+            Our team of experts is ready to help you bring your vision to life.
+          </p>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between border-b-2 p-4">
+              <h3 class="text-xl font-bold">Living Room Design</h3>
+              <span class="text-2xl">+</span>
+            </div>
+            <div class="flex justify-between border-b-2 p-4">
+              <h3 class="text-xl font-bold">Office Room Design</h3>
+              <span class="text-2xl">+</span>
+            </div>
+          </div>
+          <button class="bg-black text-white px-8 py-3 rounded-md text-xl w-64">
+            Learn More
+          </button>
+        </div>
+      </section>
+
+      <!-- Footer (Similar modifications can be applied) -->
+      <footer class="bg-black text-white py-12">
+        <div class="flex gap-12">
+          <div class="w-1/3">
+            <img src="images/Logo2.png" alt="Logo" class="w-48 mb-6" />
+            <p class="text-lg mb-6">VivaDecor: luxury interior design</p>
+            <div class="flex space-x-4">
+              <img src="images/Facebook.png" alt="Facebook" />
+              <img src="images/X.png" alt="Twitter" />
+              <img src="images/Instagram.png" alt="Instagram" />
+              <img src="images/Linkdin.png" alt="LinkedIn" />
+            </div>
+          </div>
+          <div class="flex-grow grid grid-cols-3 gap-8">
+            <div>
+              <h4 class="text-xl font-bold mb-4">Our Services</h4>
+              <ul class="space-y-2">
+                <li class="text-lg">Interior Design</li>
+                <li class="text-lg">Outdoor Design</li>
+                <li class="text-lg">Lighting Design</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold mb-4">Company</h4>
+              <ul class="space-y-2">
+                <li class="text-lg">Reviews</li>
+                <li class="text-lg">Careers</li>
+                <li class="text-lg">Pricing</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold mb-4">Contact</h4>
+              <p class="text-lg mb-2">info@vivadecor.com</p>
+              <p class="text-lg">Design Avenue, Cityville, CA 90210</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
