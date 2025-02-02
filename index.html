@@ -62,15 +62,11 @@
   <body class="font-inter">
     <!-- Header -->
     <header>
-      <nav class="navbar navbar-expand-lg bg-white px-4 py-4 sm:px-10">
+      <nav class="navbar navbar-expand-lg px-4 py-4 sm:px-10">
         <div
           class="container-fluid desktop-container flex flex-wrap items-center justify-between"
         >
-          <img
-            class="navbar-brand w-32 md:w-48"
-            src="images/Logo.png"
-            alt="Logo"
-          />
+          <img class="navbar-brand w-32" src="images/Logo.png" alt="Logo" />
           <button
             class="navbar-toggler block lg:hidden"
             type="button"
@@ -82,42 +78,54 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse flex-grow-0 w-full lg:flex lg:items-center lg:justify-around"
-            id="navbarText"
-          >
+          <div class="collapse navbar-collapse" id="navbarText">
             <div
-              class="flex flex-col lg:flex-row justify-center lg:items-center"
+              class="flex flex-col lg:flex-row justify-center lg:justify-center lg:items-center w-full"
             >
               <ul
-                class="navbar-nav flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4"
+                class="navbar-nav flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 lg:justify-center lg:mx-auto"
               >
                 <li class="nav-item text-center">
-                  <a class="nav-link font-medium text-2xl" href="#">Home</a>
+                  <a
+                    class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
+                    href="#"
+                    >Home</a
+                  >
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link font-medium text-2xl" href="#">Service</a>
+                  <a
+                    class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
+                    href="#"
+                    >Service</a
+                  >
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link font-medium text-2xl" href="#">Contact</a>
+                  <a
+                    class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
+                    href="#"
+                    >Contact</a
+                  >
                 </li>
                 <li class="nav-item text-center">
-                  <a class="nav-link font-medium text-2xl" href="#">Support</a>
+                  <a
+                    class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
+                    href="#"
+                    >Support</a
+                  >
                 </li>
               </ul>
             </div>
           </div>
           <button
-            class="hidden lg:block rounded-md font-semibold bg-black text-white rounded-md py-3 px-12 text-xl"
-            onclick="window.location.href='contact.html'"
+            class="hidden lg:block rounded-md font-semibold bg-black text-white rounded-md py-3 px-12 text-[22px]"
           >
-            Sign Up
+            <a href="contact.html">Sign Up</a>
           </button>
         </div>
       </nav>
     </header>
 
-    <main class="desktop-container">
+    <main class="container">
       <!-- Hero Section -->
       <section class="px-4 py-8">
         <div class="flex responsive-flex-column items-center">
@@ -359,7 +367,7 @@
           </h2>
           <div class="flex lg:absolute left-1/3 top-1/3 gap-4">
             <div
-              class="bg-black lg:w-1/2 lg:border-8 border-white p-8 lg:p-12 sm:w-1/2 text-white"
+              class="bg-black md:w-1/2 md:border-8 border-white p-8 md:p-12 w-full text-white"
             >
               <h3 class="text-sm lg:text-8xl mb-4">"</h3>
               <p class="lg:mb-8 text-sm lg:text-lg font-medium leading-6">
@@ -382,7 +390,7 @@
               </div>
             </div>
             <div
-              class="bg-black lg:border-8 border-white lg:w-1/2 px-8 border-2 border-red-500 sm:w-1/2 text-white"
+              class="bg-black md:border-8 border-white md:w-1/2 px-8 hidden md:block text-white"
             >
               <h3 class="text-sm lg:text-8xl m-4">"</h3>
               <p class="lg:mb-8 text-sm lg:text-lg font-medium leading-6">
@@ -409,7 +417,7 @@
             class="flex gap-4 hide-desk-arrow lg:w-full my-4 w-full justify-center lg:justify-start lg:items-end"
           >
             <img src="./images/Left arrow.png" alt="left arrow" />
-            <img src="./images/Right arrow.png" alt="right wrrow" />
+            <img src="./images/Right arrow.png" alt="right arrow" />
           </div>
         </div>
       </section>
