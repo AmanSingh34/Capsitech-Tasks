@@ -86,7 +86,7 @@
     <header class="sticky top-0 bg-white z-50 shadow-sm">
       <nav class="navbar navbar-expand-lg px-4 py-4 sm:px-10">
         <div
-          class="container-fluid desktop-container flex flex-wrap items-center justify-between"
+          class="container-fluid px-2 lg:px-16 container flex flex-wrap items-center justify-between"
         >
           <a href="./index.html">
             <img
@@ -120,6 +120,7 @@
                     >Home</a
                   >
                 </li>
+
                 <li class="nav-item text-center">
                   <a
                     class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
@@ -137,7 +138,7 @@
                 <li class="nav-item text-center">
                   <a
                     class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
-                    href="./contact.html"
+                    href="./contact.html#support"
                     >Support</a
                   >
                 </li>
@@ -155,12 +156,14 @@
 
     <main class="container">
       <!-- Hero Section -->
-      <section class="px-4 py-8">
+      <section class="py-8">
         <div class="flex responsive-flex-column items-center">
           <div
-            class="w-full flex-col flex justify-between gap-16 flex-1 lg:w-1/2 text-left px-6 lg:text-left responsive-mb-4"
+            class="w-full flex-col flex justify-between gap-16 flex-1 lg:w-1/2 text-left lg:text-left responsive-mb-4"
           >
-            <h1 class="md:text-9xl text-7xl font-medium mb-4 text-black-600">
+            <h1
+              class="md:text-9xl text-7xl font-medium hover:text-black transition-colors transform hover:scale-105 mb-4 text-black-600"
+            >
               Interior Design
             </h1>
             <p
@@ -180,7 +183,7 @@
         <!-- Stats Section -->
         <div class="flex responsive-flex-column mt-8">
           <div
-            class="flex-1 lg:flex lg:flex-col lg:justify-around lg:w-1/3 px-4 text-center lg:text-left"
+            class="flex-1 lg:flex lg:flex-col lg:justify-around lg:w-1/3 text-center lg:text-left"
           >
             <button
               class="w-full md:w-full lg:w-2/5 bg-black text-white rounded-md text-base lg:text-lg font-medium py-3 mb-4 hover:bg-gray-800 active:bg-gray-700 transform hover:scale-105 active:scale-95 transition-colors duration-300"
@@ -188,20 +191,32 @@
               Start Project
             </button>
             <div class="grid grid-cols-3 gap-4">
-              <div class="flex flex-col items-center">
-                <h2 class="text-2xl lg:text-6xl text-gray-600">400+</h2>
+              <div class="flex flex-col items-start">
+                <h2
+                  class="text-2xl lg:text-6xl hover:text-black transition-colors text-gray-600"
+                >
+                  400+
+                </h2>
                 <p class="text-sm font-medium lg:text-lg text-gray-600">
                   Project Complete
                 </p>
               </div>
-              <div class="flex flex-col items-center">
-                <h2 class="text-2xl lg:text-6xl text-gray-600">600+</h2>
+              <div class="flex flex-col items-start">
+                <h2
+                  class="text-2xl lg:text-6xl hover:text-black transition-colors text-gray-600"
+                >
+                  600+
+                </h2>
                 <p class="text-sm lg:text-lg font-medium text-gray-600">
                   Satisfied Clients
                 </p>
               </div>
-              <div class="flex flex-col items-center">
-                <h2 class="text-2xl lg:text-6xl text-gray-600">100+</h2>
+              <div class="flex flex-col items-start">
+                <h2
+                  class="text-2xl lg:text-6xl hover:text-black transition-colors text-gray-600"
+                >
+                  100+
+                </h2>
                 <p class="text-sm lg:text-lg font-medium text-gray-600">
                   Unique Styles
                 </p>
@@ -209,9 +224,13 @@
             </div>
           </div>
           <div class="w-full lg:w-1/2 relative mt-4 lg:mt-0">
-            <img src="images/hero2.png" alt="hero2" class="lg:w-5/6 w-full" />
             <img
-              class="position-absolute bottom-0 lg:right-12 -right-6 w-1/4 lg:w-1/6"
+              src="images/hero2.png"
+              alt="hero2"
+              class="lg:w-5/6 lg:ml-10 w-full"
+            />
+            <img
+              class="position-absolute bottom-0 lg:right-0 -right-6 w-1/4 lg:w-1/6"
               src="images/Arrow down.png"
               alt="down arrow"
             />
@@ -220,7 +239,7 @@
       </section>
 
       <!-- Services Section -->
-      <section id="services" class="px-4 py-8">
+      <section id="services" class="py-8">
         <div class="flex items-center mb-8">
           <div class="w-14 h-1 bg-gray-600 mr-4"></div>
           <h2 class="text-3xl lg:text-4xl text-[#1F1F1F] font-bold">
@@ -275,11 +294,13 @@
 
       <!-- CTA Section -->
       <section class="flex responsive-flex-column my-8">
-        <div class="w-full lg:p-10 lg:w-1/2">
+        <div class="w-full lg:w-1/2">
           <img src="images/design1.png" alt="cta" class="w-full" />
         </div>
-        <div class="w-full lg:w-1/2 flex flex-col justify-between p-8">
-          <h2 class="text-2xl lg:text-5xl font-medium mb-4 leading-8">
+        <div class="w-full lg:w-1/2 flex flex-col justify-between pl-8 py-8">
+          <h2
+            class="text-2xl lg:text-5xl hover:text-black transition-colors font-medium mb-4 leading-8"
+          >
             Designing Your Dream With Brilliance
           </h2>
           <p class="text-base text-gray-600 font-medium lg:text-lg mb-4">
@@ -314,18 +335,18 @@
       </section>
 
       <!-- Steps Section -->
-      <section
-        class="flex responsive-flex-column lg:pl-16 gap-12 lg:my-36 my-8 lg:my-16"
-      >
+      <section class="flex responsive-flex-column gap-12 my-8">
         <div class="w-full lg:w-1/2 flex flex-col">
-          <h2 class="text-2xl mx-4 lg:text-4xl font-medium mb-16">
+          <h2
+            class="text-2xl lg:text-4xl hover:text-black transition-colors font-medium mb-16"
+          >
             Designing Your Dream in Three Simple Steps
           </h2>
           <div class="space-y-4">
-            <div class="flex items-center">
-              <div class="flex w-36 gap-4 flex-col items-center">
+            <div class="flex items-center justify-start">
+              <div class="flex w-36 gap-4 flex-col items-start">
                 <img src="images/start.png" alt="Craft" class="mr-4" />
-                <div class="bg-black w-1 opacity-50 h-20"></div>
+                <div class="bg-black w-1 ml-8 opacity-50 h-20"></div>
               </div>
               <div class="w-2/3 space-y-4">
                 <h3 class="text-xl lg:text-xl font-bold">Start Project</h3>
@@ -339,9 +360,9 @@
               </div>
             </div>
             <div class="flex items-center">
-              <div class="flex w-36 gap-4 flex-col items-center">
+              <div class="flex w-36 gap-4 flex-col items-start">
                 <img src="images/craft.png" alt="Craft" class="mr-4" />
-                <div class="bg-black opacity-50 w-1 h-20"></div>
+                <div class="bg-black opacity-50 ml-8 w-1 h-20"></div>
               </div>
               <div class="w-2/3 space-y-4">
                 <h3 class="font-bold lg:text-xl text-xl">Craft</h3>
@@ -354,9 +375,9 @@
               </div>
             </div>
             <div class="flex items-center">
-              <div class="flex w-36 gap-4 flex-col items-center">
+              <div class="flex w-36 gap-4 flex-col items-start">
                 <img src="images/execute.png" alt="Craft" class="mr-4" />
-                <div class="bg-black hidden w-1 h-20"></div>
+                <div class="bg-black hidden ml-8 w-1 h-20"></div>
               </div>
               <div class="w-2/3">
                 <h3 class="font-bold lg-text-xl text-xl">Execute</h3>
@@ -372,15 +393,13 @@
           </div>
         </div>
         <div class="w-full lg:w-1/2">
-          <img src="images/design2.png" alt="Design" class="w-full lg:w-5/6" />
+          <img src="images/design2.png" alt="Design" class="w-full h-5/6" />
         </div>
       </section>
 
       <!-- Testimonials Section -->
-      <section
-        class="flex lg:gap-16 relative responsive-flex-column my-8 lg:px-16"
-      >
-        <div class="w-full sm:hidden lg:p-6 lg:block lg:w-1/2">
+      <section class="flex lg:gap-16 relative responsive-flex-column my-8">
+        <div class="w-full sm:hidden lg:block lg:w-1/2">
           <img src="images/testimonial.png" alt="Testimonial" class="w-full" />
           <div
             class="flex hidden-arrow gap-4 lg:w-full my-4 w-full justify-center lg:justify-start lg:items-end"
@@ -394,7 +413,9 @@
           </div>
         </div>
         <div class="w-full lg:flex-1 px-2 my-8 lg:w-1s/3">
-          <h2 class="text-2xl lg:text-4xl lg:w-full font-medium mb-4">
+          <h2
+            class="text-2xl lg:text-4xl hover:text-black transition-colors lg:w-full font-medium mb-4"
+          >
             What Our Customers Say About Us
           </h2>
           <div class="flex lg:absolute left-1/3 top-1/3 gap-4">
@@ -461,7 +482,7 @@
       <!-- Newsletter Section -->
       <section
         id="newsletter"
-        class="max-w-4xl mx-auto px-4 relative"
+        class="max-w-4xl mx-auto relative"
         style="margin-bottom: -2rem"
       >
         <div class="text-center bg-white rounded-lg shadow-xl">
