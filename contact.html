@@ -77,9 +77,8 @@
         }
       }
 
-      /* Mobile first approach (base styles for small screens) */
       .responsive-section {
-        margin: 1rem !important; /* Smaller margins on mobile */
+        margin: 1rem !important;
       }
 
       .contact-info-container {
@@ -107,12 +106,7 @@
         }
       }
 
-      /* Desktop view (≥1280px) */
       @media (min-width: 1280px) {
-        .responsive-section {
-          margin: 7rem !important; /* Original 28px margin */
-        }
-
         .contact-info-container {
           flex-wrap: nowrap !important;
         }
@@ -130,6 +124,9 @@
       }
       .scrollbar-hidden::-webkit-scrollbar {
         display: none;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
       }
     </style>
   </head>
@@ -154,9 +151,9 @@
       </svg>
     </a>
     <header class="sticky top-0 bg-white z-50 shadow-sm">
-      <nav class="navbar navbar-expand-lg px-4 py-4 sm:px-10">
+      <nav class="navbar navbar-expand-lg py-4 px-4 sm:px-10">
         <div
-          class="container-fluid desktop-container flex flex-wrap items-center justify-between"
+          class="container-fluid container flex flex-wrap items-center justify-between"
         >
           <a href="./index.html">
             <img
@@ -190,10 +187,11 @@
                     >Home</a
                   >
                 </li>
+
                 <li class="nav-item text-center">
                   <a
                     class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
-                    href="index.html#services"
+                    href="#services"
                     >Service</a
                   >
                 </li>
@@ -207,7 +205,7 @@
                 <li class="nav-item text-center">
                   <a
                     class="nav-link font-medium text-[22px] text-[#545454] hover:text-black transition-colors"
-                    href="./contact.html"
+                    href="./contact.html#support"
                     >Support</a
                   >
                 </li>
@@ -232,7 +230,7 @@
               Contact Us
             </h2>
           </div>
-          <div class="contact-info-container flex justify-between">
+          <div id="support" class="contact-info-container flex justify-between">
             <div
               class="contact-info-item flex gap-4 items-start cursor-pointer hover:scale-105 active:scale-95 transition-transform"
             >
@@ -275,11 +273,12 @@
         class="greyyy backdrop-blur-[4px] px-4 md:px-28 lg:px-56 py-10 md:py-20"
       >
         <h2
-          class="text-xl md:text-3xl lg:text-4xl text-center w-full lg:w-2/3 mx-auto mb-16 font-bold text-white lg:px-32"
+          class="text-xl md:text-3xl lg:text-4xl text-center w- full lg:w-2/3 mx-auto mb-16 font-bold text-white lg:px-32"
         >
           Get in touch with us. We're here to assist you.
         </h2>
-        <div
+        <form
+          id="contactForm"
           class="grid bg-black flex-col p-6 md:p-12 md:px-24 w-full justify-center gap-8 md:gap-16 backdrop-blur-[10px] grid-cols-1 lg:grid-cols-2 md:w-2/3 md:px-16 md:mx-auto shadow-lg md:rounded-3xl"
         >
           <div class="flex flex-col gap-2 group">
@@ -485,6 +484,7 @@
               />
               <label
                 for="terms"
+                id="terms-label"
                 class="text-gray-500 font-medium text-sm md:text-lg"
               >
                 Agree terms and conditions
@@ -494,12 +494,13 @@
 
           <div class="lg:col-span-1 flex justify-center">
             <button
+              type="submit"
               class="w-full bg-white text-black font-semibold text-sm md:text-lg py-3 rounded-md hover:bg-gray-200 transition-colors"
             >
               Submit Information
             </button>
           </div>
-        </div>
+        </form>
       </section>
       <section id="map" class="responsive-section">
         <div class="w-full h-[600px] md:h-[800px] lg:h-[100vh]">
@@ -793,5 +794,6 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
