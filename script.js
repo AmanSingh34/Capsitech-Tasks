@@ -15,17 +15,85 @@ const fields = [
   },
   {
     id: "state",
-    message: "State must contain only letters",
+    message: " must select a state",
     validate: validateString,
   },
   {
     id: "country",
-    message: "Country must contain only letters",
+    message: "must select a country",
     validate: validateString,
   },
   { id: "address", message: "Address is required" },
   { id: "message", message: "Message is required" },
 ];
+
+const stateOptions = [
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chhattisgarh",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal",
+];
+
+const stateSelect = document.getElementById("state");
+stateSelect.innerHTML =
+  `<option value="">Select State</option>` +
+  stateOptions
+    .map((state) => `<option value="${state}">${state}</option>`)
+    .join("");
+
+// Word Counter for Address & Message Fields
+
+function addWordCounter(input, maxWords) {
+  let counter = input.parentNode.querySelector(".word-counter");
+
+  if (!counter) {
+    counter = document.createElement("div");
+    counter.classList.add("word-counter", "text-sm", "mt-1");
+    input.parentNode.appendChild(counter);
+  }
+
+  input.addEventListener("input", function () {
+    let words = input.value.trim().split(/\s+/).filter(Boolean);
+    let wordCount = words.length;
+
+    if (wordCount > maxWords) {
+      input.value = words.slice(0, maxWords).join(" ");
+      wordCount = maxWords;
+    }
+
+    counter.textContent = `${wordCount}/${maxWords}`;
+    counter.classList.toggle("text-red-500", wordCount === maxWords);
+    counter.classList.toggle("text-green-500", wordCount < maxWords);
+  });
+}
+
+// Initialize word counters
+addWordCounter(document.getElementById("message"), 200);
+addWordCounter(document.getElementById("address"), 50);
 
 document
   .getElementById("contactForm")
@@ -102,21 +170,46 @@ document
   });
 
 function validateField(input, validationFunction, errorMessage) {
-  let errorElement = input.nextElementSibling;
-  if (!errorElement || !errorElement.classList.contains("error-message")) {
+  let iconElement = input.parentNode.querySelector(".validation-icon");
+  let errorElement = input.parentNode.querySelector(".error-message");
+
+  if (!errorElement) {
     errorElement = document.createElement("div");
     errorElement.classList.add("error-message", "text-red-500", "text-sm");
     input.parentNode.appendChild(errorElement);
   }
 
+  if (!iconElement) {
+    iconElement = document.createElement("span");
+    iconElement.classList.add(
+      "validation-icon",
+      "absolute",
+      "right-2",
+      "top-8"
+    );
+    input.parentNode.appendChild(iconElement);
+  }
+
+  errorElement.textContent = "";
+  iconElement.innerHTML = "";
+
   if (!input.value.trim()) {
     errorElement.textContent = errorMessage;
+    iconElement.innerHTML = "❌";
+    iconElement.classList.add("text-red-500");
+    iconElement.classList.remove("text-green-500");
     return false;
   } else if (validationFunction && !validationFunction(input.value)) {
     errorElement.textContent = errorMessage;
+    iconElement.innerHTML = "❌";
+    iconElement.classList.add("text-red-500");
+    iconElement.classList.remove("text-green-500");
     return false;
   } else {
     errorElement.textContent = "";
+    iconElement.innerHTML = "✅";
+    iconElement.classList.add("text-green-500");
+    iconElement.classList.remove("text-red-500");
     return true;
   }
 }
