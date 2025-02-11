@@ -187,7 +187,9 @@ function validateField(input, validationFunction, errorMessage) {
       "right-2",
       "top-8"
     );
-    input.parentNode.appendChild(iconElement);
+   if (input.parentNode.classList.contains("relative")) {
+      input.parentNode.appendChild(iconElement);
+    }
   }
 
   errorElement.textContent = "";
